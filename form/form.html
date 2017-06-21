@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html language="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title> </title>
+  <link rel="stylesheet" href="css/base.css">
+  <body>
+    <form action="" method="post" enctype="multipart/form-data"/>
+    <!--ne pas oublier enctype="multipart/form-data" si on veut envoyer un fichier,
+     comme pour la div avatar-->
+      <!-- action est l'url de la page qui va recevoir les données, si la valeur
+      est vide, c'est la page actuelle-->
+<input type="hidden" name="token" value=""/>
+<!-- si on a un formulaire qui permet de modifier l'avatar pour un utilisateur qui est
+déjà inscrit, cet input permet de reconnaître l'utilisateur. Le token est un outil pour
+se prémunir des attaques xss qui consistent à envoyer des liens sur lesquels les gens vont
+cliquer et valider un formulaire sans le réaliser.-->
+
+<div>
+  <label for="firstname"> Prénom</label>
+</div>
+      <div>
+        <input type="text" id="firstname" name="firstname" value="" placeholder="prénom"/>
+        <!-- value est la valeur que le champ va avoir, on peut le préremplir-->
+        <!-- le placeholder est une explication là où le texte sera entré, pour que l'utilisateur sache ce qu'il a à remplir-->
+      </div>
+<div>
+  <label for="lastname"> Nom </label>
+</div>
+
+      <div>
+        <input type="text" id="lastname" name="lastname" value="" placeholder="nom"/>
+      </div>
+<div>
+  <label>Email</label>
+</div>
+
+<div>
+  <input type="email" id="email" name="email" value="" placeholder="Votre Email"/>
+</div>
+
+<div>
+  <label>Age</label>
+</div>
+
+<div>
+  <input type="number" id="age" name="age" value="" placeholder="Votre Age"/>
+</div>
+
+<div>
+  <label for="birthday">Date de naissance</label>
+</div>
+
+<input type="date" id="birthday" name="birthday" value="" placeholder="JJ/MM/AAAA"/>
+
+<div>
+  <label for="password">Mot de passe</label>
+</div>
+
+<div>
+  <input type="password" id="password" name="password" value="" placeholder="votre mot de passe"/>
+</div>
+
+<div>
+  <label for="avatar">Avatar</label>
+  <div>
+    <input type="file" id="avatar" name="avatar[]" value="" />
+    <div>
+      <label>Mangez-vous des fruits ?</label>
+    </div>
+
+        <div>
+          <label>Pomme<input type="checkbox" id="fruit_1" name="fruits[]" value="1"/></label><br/>
+          <label>Poire<input type="checkbox" id="fruit_2" name="fruits[]"  value="2"/></label><br/>
+          <label>Pêche<input type="checkbox" id="fruit_3" name="fruits[]"  value="3"/></label><br/>
+          </div>
+          <!-- id="fruit_" pas forcément nécessaire, mais peut être utile pour du futur javascript -->
+<div>
+  <label>Quel est votre légume préféré ?</label>
+</div>
+
+    <div>
+      <label>Aucun<input type="radio" id="vegetable_0" name="légumes"  value=""/></label><br/>
+      <label>Concombre<input type="radio" id="vegetable_1" name="légumes" value="1"/></label><br/>
+      <label>Aubergine<input type="radio" id="vegetable_2" name="légumes"  value="2"/></label><br/>
+      <label>Poireau<input type="radio" id="vegetable_3" name="légumes"  value="3"/></label><br/>
+
+      </div>
+
+      <!-- radio-->
+      <!-- le [] signifie qu'on accepte des choix multiples-->
+      <div>
+        <input type="submit"  value="Valider"/>
+      </div>
+
+    </form>
+
+  </body>
+</head>
+</html>
